@@ -6,7 +6,7 @@ int main()
 //     int d = (-8+22)*a -10+c/2;
 //     printf ("%d\n",d);
 //  int arr[]={ };
-char arr[4] = {'b','i','t',};
+char arr[5] = {'b','i','t',};
 printf ("%d\n",strlen(arr));
     
     return 0;
