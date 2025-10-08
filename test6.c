@@ -56,12 +56,37 @@
 //     }
 //     return 0;
 // }
+// int main ()
+// {
+//     int ch = 0;
+//     while((ch = getchar()) != EOF)
+//     {
+//         putchar(ch);
+//     }
+//     return 0;
+
+// int main ()
+// {
+//     int arr[] ={73,32,99,97,110,32,100,111,32,105,116,33};
+//     int i = 0;
+//     int sz = sizeof arr / sizeof arr[0];
+//     while (i<sz)
+//     {
+//         printf ("%c",arr[i]);
+//         i ++;
+//     }
+//     return 0;
+// }
+
+//出生日期输入输出
 int main ()
-{
-    int ch = 0;
-    while((ch = getchar()) != EOF)
-    {
-        putchar(ch);
-    }
+ {   //输入
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    scanf("%4d%2d%2d",&year,&month,&day);
+    printf ("year=%d\n",year);
+    printf ("month=%02d\n",month);
+    printf ("day=%02d\n",day);
     return 0;
-}
+ }
