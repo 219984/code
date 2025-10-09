@@ -79,14 +79,89 @@
 // }
 
 //出生日期输入输出
-int main ()
- {   //输入
-    int year = 0;
-    int month = 0;
-    int day = 0;
-    scanf("%4d%2d%2d",&year,&month,&day);
-    printf ("year=%d\n",year);
-    printf ("month=%02d\n",month);
-    printf ("day=%02d\n",day);
-    return 0;
- }
+// int main ()
+//  {   //输入
+//     int year = 0;
+//     int month = 0;
+//     int day = 0;
+//     scanf("%4d%2d%2d",&year,&month,&day);
+//     printf ("year=%d\n",year);
+//     printf ("month=%02d\n",month);
+//     printf ("day=%02d\n",day);
+//     return 0;
+//  }
+// int main ()
+// {
+//    int id = 0;
+//    float c = 0.0f;
+//    float math = 0.0f;
+//    float eng = 0.0f;//0.0f是为了说明是float类型
+//    //输入
+//    scanf ("%d.%f,%f,%f",&id,&c,&math,&eng);
+//    //输出
+//    printf ("The each subject score of No. %d is %.2f, %.2f ,%.2f.",id,c,math,eng);
+//    return 0;
+// }
+// int main ()
+// {
+//    int n = printf("Hello world!");
+//    printf ("\n%d\n",n);
+//    return 0 ;
+// }
+// int main ()
+// {
+//    int arr[4] = {0};
+//    int i = 0;
+//    while(i<4)
+//    {
+//       scanf("%d",&arr);
+//       i ++;
+//    }
+//    int max = arr[0];
+//    while(i<4)
+//    {
+//       if(arr[i]>max)
+//       {
+//          max = arr[i];
+//       }
+//       i ++;
+//    } 
+//    printf ("%d\n",max);
+//    return 0;
+// }
+// int main ()
+// {
+//    int i = 1;
+//    int n = 0;
+//    int max = 0;
+//    scanf ("%d",&max);
+//    while (i < 4)
+//    {
+//       scanf ("%d",&n);
+//       if (n > max)
+//       {
+//          max = n;
+//       }
+//       i  ++;
+//    }
+//    printf ("%d\n",max);
+//    return 0;
+// }
+// int main ()
+// {
+//    double r = 0.0;
+//    double v = 0.0;
+//    scanf ("%lf",&r);
+//    v = 4/3.0*3.1415926*r*r*r;
+//    printf ("%.3lf\n",v);
+//    return 0;
+// }
+int main()
+{
+   int weight = 0;
+   int high = 0;
+   scanf ("%d %d",&weight ,&high);
+   float bmi = weight/(high/100.0)/(high/100.0);
+   printf ("%.2f\n",bmi);
+   return 0;
+}
