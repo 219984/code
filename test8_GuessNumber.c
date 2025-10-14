@@ -97,70 +97,135 @@
 //     } while (input);
 //     return 0;
 // }
+// #include <stdlib.h>
+// #include <time.h>
+// void menu()
+// {
+//     printf ("************************\n");
+//     printf ("******   欢迎游玩  ******\n");
+//     printf ("******   1.play   ******\n");
+//     printf ("******   0.exit   ******\n");
+//     printf ("************************\n");
+    
+// }
+
+// void game()
+// {
+//     //生成随机数
+//     int guess = 0;
+//     int ret = rand()%101;
+//     while(1)
+//     {
+//         printf("请输入数字：\n");
+//     scanf("%d",&guess);
+//     if (guess<ret)
+//     {
+//         printf ("**********猜小了***********\n");
+//     }
+//     else if(guess>ret )
+//     {
+//         printf ("**********猜大了***********\n");
+//     }
+//     else
+//     {
+//         printf ("*******恭喜你猜对了！******\n");
+//         Sleep(500);
+//         break;
+//     }
+// }
+// }
+// int main ()
+// {
+//     srand((unsigned int )time(NULL));
+//     int input = 0;
+
+//     do
+//    { //生成菜单
+//     menu ();
+//     //选择
+//     printf("请选择：>");
+//     scanf ("%d",&input);
+//     switch(input)
+//     {
+//         case 1:
+//         printf("开始游戏\n");
+//         game();
+//         break;
+//         case 0:
+//         printf("结束游戏\n");
+//         break;
+//         default:
+//         printf ("输入无效\n");
+//         break;
+
+//     }
+    
+//    }while(input);
+//     return 0 ;
+// }
+
+
+
+
 #include <stdlib.h>
 #include <time.h>
 void menu()
 {
-    printf ("************************\n");
-    printf ("******   欢迎游玩  ******\n");
-    printf ("******   1.play   ******\n");
-    printf ("******   0.exit   ******\n");
-    printf ("************************\n");
-    
+    printf("欢迎游玩数字游戏\n");
+    printf("    选择选项\n");
+    printf("     1.游玩\n");
+    printf("     0.退出\n");
 }
-
 void game()
 {
-    //生成随机数
+    // 生成数字
+    int num = rand() % 101;
     int guess = 0;
-    int ret = rand()%101;
-    while(1)
+    while (1)
     {
-        printf("请输入数字：\n");
-    scanf("%d",&guess);
-    if (guess<ret)
-    {
-        printf ("**********猜小了***********\n");
-    }
-    else if(guess>ret )
-    {
-        printf ("**********猜大了***********\n");
-    }
-    else
-    {
-        printf ("*******恭喜你猜对了！******\n");
-        Sleep(500);
-        break;
+        printf("输入你猜想的数字\n");
+        scanf("%d", &guess);
+        if (guess > num)
+        {
+            printf("猜大了\n");
+        }
+        else if (guess < num)
+        {
+            printf("猜小了\n");
+        }
+        else
+        {
+            printf("恭喜你猜对了\n");
+            break;
+        }
     }
 }
-}
-int main ()
+int main()
 {
-    srand((unsigned int )time(NULL));
+    srand((unsigned int)time(NULL));
+    // 生成大厅
+    menu();
+    // 选择游玩
     int input = 0;
-
     do
-   { //生成菜单
-    menu ();
-    //选择
-    printf("请选择：>");
-    scanf ("%d",&input);
-    switch(input)
     {
+        printf("请选择：>");
+        scanf("%d", &input);
+        switch (input)
+        {
         case 1:
-        printf("开始游戏\n");
-        game();
-        break;
+            printf("开始玩\n");
+            game();
+            break;
         case 0:
-        printf("结束游戏\n");
-        break;
+            printf("退出游戏\n");
+            break;
         default:
-        printf ("输入无效\n");
-        break;
+            printf("选择无效\n");
+            break;
+        }
 
-    }
-    
-   }while(input);
-    return 0 ;
+    } while (input);
+
+    return 0;
 }
-
