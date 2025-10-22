@@ -33,9 +33,10 @@ void DisplayBoard(char board[ROWS][COLS], int row, int col)
 	int i = 0;
 	int j = 0;
 	printf("-------------------\n");
-	for (i = 0;i <= col;i++)
+	printf("%c ",'0');
+	for (i = 1;i <= col;i++)
 	{
-		printf("%d ", i);
+		printf("%d  ", i);
 	}
 	printf("\n");
 	for (i = 1;i <= row;i++)
@@ -43,7 +44,7 @@ void DisplayBoard(char board[ROWS][COLS], int row, int col)
 		printf("%d ", i);
 		for (j = 1;j <= col;j++)
 		{
-			printf("%c ", board[i][j]);
+			printf("%c  ", board[i][j]);
 		}
 		printf("\n");
 	}
@@ -147,7 +148,7 @@ int Findmine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 				{
 					if (mine[x][y] == '1')
 					{
-						printf("抱歉，你被炸死了！\n");
+						printf("恭喜你，你被炸死了！\n");
 						DisplayBoard(mine, ROW, COL);
 						game_over = 1;
 						break;
