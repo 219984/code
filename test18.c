@@ -25,19 +25,38 @@
 //     return 0;
 // }
 
-int my_strlen(char* str)
-{
-    char *start = str;
-    while(*str != '\0')
-    {
-        str++;
-    }
-    return (str-start);
-}
-int main ()
-{
-    char arr[]="abcdef";
-    int len = my_strlen(arr);
-    printf ("%d\n",len);
-    return 0;
-}
+// int my_strlen(char* str)
+// {
+//     char *start = str;
+//     while(*str != '\0')
+//     {
+//         str++;
+//     }
+//     return (str-start);
+// }
+// int main ()
+// {
+//     char arr[]="abcdef";
+//     int len = my_strlen(arr);
+//     printf ("%d\n",len);
+//     return 0;
+// }
+
+// int main ()
+// {
+//     int a = 10;
+//     int *pa = &a;
+//     int** ppa = &pa;
+//     printf ("%d\n",a);
+//     printf ("%d\n",pa);
+//     printf ("%d\n",ppa);
+
+//     return 0;
+// }
+
+// int main ()
+// {
+//     printf("KLM \bN\n");
+//     return 0;
+// }
+
