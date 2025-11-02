@@ -11,7 +11,7 @@ char* my_strcpy(char*dist,char* star)
     return ret;
 }
 int main ()
-{
+{   int a = 0;
     char arr1[20]={0};
     char arr2[]="hell0 world";
     printf("%s\n",my_strcpy(arr1,arr2));
