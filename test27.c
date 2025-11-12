@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-void reverse(char arr[],int len)
+void reverse(char *left,char * right)
 {
-    char *left = arr;
-    char *right = arr + len -1;
     while(left < right)
     {
         char tmp = 0;
@@ -20,16 +18,23 @@ int main()
     char arr[101] = {0};
     gets(arr);
     int len = strlen(arr);
-    reverse(arr,len);
-    char* start = arr;
-    char* end = start;
-    while(*end != ' '&& *end !='\0')
+    char *left = arr;
+    char *right = arr+len-1;
+    reverse(left,right);
+    char *start = arr;
+    char *end = start;
+    while (*start != '\0')
     {
+        while (*end != ' ' && *end != '\0')
+        {
+            end++;
+        }
+        reverse(start, end - 1);
+        if(*end!='\0')
         end++;
-    } 
-    reverse(start,end-1);
-    start = end;
-    printf("%s\n",arr);
+        start = end;
+    }
+    printf("%s\n", arr);
 
     return 0;
 }
