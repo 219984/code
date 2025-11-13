@@ -15,6 +15,7 @@ void reverse(char *left,char * right)
 }
 int main()
 {
+    int a = 0;
     char arr[101] = {0};
     gets(arr);
     int len = strlen(arr);
